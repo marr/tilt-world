@@ -4,7 +4,9 @@ const DAT = require('exports?DAT!./globe');
 
 class TiltWorld extends Component {
   componentDidMount() {
-    const globe = new DAT.Globe(ReactDOM.findDOMNode(this));
+    const globe = new DAT.Globe(ReactDOM.findDOMNode(this), {
+      imgDir: '/img/'
+    });
     globe.createPoints();
     globe.animate();
   }
